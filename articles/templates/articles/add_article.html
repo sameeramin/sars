@@ -1,0 +1,35 @@
+{% extends 'articles/base.html' %}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="float-right">
+                    </div>
+                    <h4 class="page-title">Add New Article</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title end breadcrumb -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <form action="" method="post">
+                            {% csrf_token %}
+
+                            {{ form }}
+
+                            <input type="submit" name="Submit" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div><!-- container -->
+
+{% endblock %}

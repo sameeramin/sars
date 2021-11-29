@@ -1,0 +1,33 @@
+{% extends 'articles/base.html' %}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="float-right">
+                        <h4 class="page-title"><a href="{% url 'index' %}"><i class="mdi mdi-arrow-left"></i>Go Back</a></h4>
+                    </div>
+                    <h4 class="page-title">Recommended Articles</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title end breadcrumb -->
+
+        <div class="row">
+            {% for art in arts %}
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">{{ art }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- end col -->
+        </div> <!-- end row -->
+    </div><!-- container -->
+
+{% endblock %}

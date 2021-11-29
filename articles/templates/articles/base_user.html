@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>SARS</title>
+        <meta content="Scientific Article Recommendation System" name="description"/>
+        <meta content="sameer" name="author"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        {% load static %}
+        <link rel="shortcut icon" href="{% static '/assets/images/favicon.ico' %}">
+
+        <link href="{% static '/assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/plugins/animate/animate.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/css/icons.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '/assets/css/style.css' %}" rel="stylesheet" type="text/css">
+        {% block extrastyles %} {% endblock %}
+    </head>
+
+
+    <body class="fixed-left">
+        <!-- Begin page -->
+        <!--<div class="accountbg"></div>-->
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div class="wrapper-page">
+
+            <div class="card">
+            {% block form %}
+
+            {% endblock %}
+
+            </div>
+        </div>
+
+
+        <!-- jQuery  -->
+        <script src="{% static '/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/assets/js/modernizr.min.js' %}"></script>
+        <script src="{% static '/assets/js/detect.js' %}"></script>
+        <script src="{% static '/assets/js/fastclick.js' %}"></script>
+        <script src="{% static '/assets/js/jquery.slimscroll.js' %}"></script>
+        <script src="{% static '/assets/js/jquery.blockUI.js' %}"></script>
+        <script src="{% static '/assets/js/waves.js' %}"></script>
+        <script src="{% static '/assets/js/jquery.nicescroll.js' %}"></script>
+        <script src="{% static '/assets/js/jquery.scrollTo.min.js' %}"></script>
+
+        <!-- App js -->
+        <script src="{% static '/assets/js/app.js' %}"></script>
+
+    </body>
+</html>

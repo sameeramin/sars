@@ -1,0 +1,75 @@
+{% extends 'articles/base.html' %}
+
+{% block content %}
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="float-right">
+                    </div>
+                    <h4 class="page-title">Manage Users</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title end breadcrumb -->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        {#                        <form action="" method="post">#}
+                        {#                            {% csrf_token %}#}
+                        {##}
+                        {#                            {{ form }}#}
+                        {##}
+                        {#                            <input type="submit" name="Submit" class="btn btn-primary">#}
+                        {#                        </form>#}
+                        <table class="table table-striped mb-0 w-100">
+                            <tr>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            {% for user in users %}
+                                {% if user.id != current_user %}
+                                    <tr class="mt-5">
+                                        <td>{{ user.name }}</td>
+                                        <td>{{ user.username }}</td>
+                                        {% if user.status %}
+                                            <td>
+                                                <form action="" method="post">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" value="{{ user.id }}" name="unapprove">
+                                                    <input type="submit" value="Unapprove" class="btn btn-warning">
+                                                </form>
+                                            </td>
+                                        {% else %}
+                                            <td>
+                                                <form action="" method="post">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" value="{{ user.id }}" name="approve">
+                                                    <input type="submit" value="Approve" class="btn btn-primary btn-sm">
+                                                </form>
+                                            </td>
+                                        {% endif %}
+                                        <td>
+                                            <form action="" method="post">
+                                                {% csrf_token %}
+                                                <input type="hidden" value="{{ user.id }}" name="remove">
+                                                <input type="submit" value="Remove" class="btn btn-danger btn-sm">
+                                            </form>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div><!-- container -->
+
+{% endblock %}
