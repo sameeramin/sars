@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>SARS</title>
+    <meta content="Scientific Article Recommendation System" name="description"/>
+    <meta content="sameer" name="author"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static '/assets/images/favicon.ico' %}">
+
+    <link href="{% static '/assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/assets/plugins/animate/animate.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/assets/css/icons.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/assets/css/style.css' %}" rel="stylesheet" type="text/css">
+    {% block extrastyles %} {% endblock %}
+</head>
+
+
+<body class="fixed-left">
+<!-- Begin page -->
+<div id="wrapper">
+    <!-- Start right Content here -->
+    {% include 'articles/sidebar.html' %}
+
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            {% include 'articles/topbar.html' %}
+
+            <div class="page-content-wrapper">
+
+                {% block content %}
+                {% endblock %}
+
+            </div> <!-- Page content Wrapper -->
+
+        </div> <!-- content -->
+
+        <footer class="footer">
+            © 2021 Scientific Articles Recommendation System.
+        </footer>
+
+    </div>
+    <!-- End Right content here -->
+</div>
+<!-- END wrapper -->
+
+
+<!-- jQuery  -->
+<script src="{% static '/assets/js/jquery.min.js' %}"></script>
+<script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/assets/js/modernizr.min.js' %}"></script>
+<script src="{% static '/assets/js/detect.js' %}"></script>
+<script src="{% static '/assets/js/fastclick.js' %}"></script>
+<script src="{% static '/assets/js/jquery.slimscroll.js' %}"></script>
+<script src="{% static '/assets/js/jquery.blockUI.js' %}"></script>
+<script src="{% static '/assets/js/waves.js' %}"></script>
+<script src="{% static '/assets/js/jquery.nicescroll.js' %}"></script>
+<script src="{% static '/assets/js/jquery.scrollTo.min.js' %}"></script>
+
+<!-- App js -->
+<script src="{% static '/assets/js/app.js' %}"></script>
+
+</body>
+</html>
