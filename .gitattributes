@@ -1,1 +1,2 @@
-*.js *.less *.scss *.css *.html linguist-detectable=false
+articles/templates/* linguist-vendored
+articles/static/* linguist-vendored
