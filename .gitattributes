@@ -1,2 +1,3 @@
-articles/templates/* linguist-vendored
-articles/static/* linguist-vendored
+# Apply override to all files and directories in the directory
+articles/templates/** linguist-vendored
+articles/static/** linguist-vendored
