@@ -1,4 +1,4 @@
-# Scientific Artilcles Recommendation System (SARS)
+# Scientific Articles Recommendation System (SARS)
 A web-based scientific articles recommendations system that recommends scientific articles of user interest based on text classification Doc2Vec modeling scheme and cosine similarity measure.
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/35958006/143923210-4a7078c4-4622-486c-aff9-663611236ee6.gif)
